@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-9">
+
+        <h1><strong>'<%= @cast.name %>'</strong></h1>
+        <small>Posted on <%= cast.created_at.strftime("%A %b %Y") %></small>
+        <hr class="heavy">
+        <p>
+          <h3>Company:</h3>
+          <%= @cast.company %>
+        </p>
+        <hr class="heavy">
+        <p>
+          <h3>Description:</h3>
+          <%= @cast.description %>
+        </p>
+        <hr class="heavy">
+        <p>
+          <h3>Dates locations:</h3>
+          <%= @cast.dates_locations %>
+        </p>
+        <hr class="heavy">
+        <p>
+          <h3>Compensation:</h3>
+          <%= @cast.compensation %>
+        </p>
+        <hr class="heavy">
+
+        <% if @cast.user == current_user %>
+          <%= link_to 'Edit', edit_cast_path(@cast), class: "btn btn-primary btn-lg"  %> 
+        <% end %>
+        <%= link_to 'Back', casts_path, class: "btn btn-primary btn-lg"  %>
+
+      </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="box panel panel-default">
+    <%= image_tag pin.image_url, class: "image-responsive" %>
+
+    <p><%= pin.user_name %></p>
+
+    <p><%= pin.city %>, <%= pin.state %></p>
+
+    <!--<h2><%= pin.name %></h2>-->
+
+    <!--<h3>Age:</h3>
+    <%= pin.age %>-->
+
+    <!--<h3>Bio:</h3>
+    <%= pin.bio %>
+
+    <h3>Credits:</h3>
+    <%= pin.credits %>-->
+  <%= link_to 'Show', pin %>
+  <% if pin.user == current_user %>
+    <%= link_to 'Edit', edit_pin_path(pin) %>
+    <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div>

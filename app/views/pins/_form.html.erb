@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= form_for(@pin) do |f| %>
+        <% if @pin.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
+
+            <ul>
+            <% @pin.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.label :image %><br>
+          <%= f.file_field :image, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :remote_image_url, "or image url" %><br>
+          <%= f.file_field :remote_image_url, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :user_name %><br>
+          <%= f.text_field :user_name, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :age %><br>
+          <%= f.text_field :age, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :city %><br>
+          <%= f.text_field :city, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :state %><br>
+          <%= f.text_field :state, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :bio %><br>
+          <%= f.text_area :bio, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :credits %><br>
+          <%= f.text_area :credits, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit "Create Profile", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

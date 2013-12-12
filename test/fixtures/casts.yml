@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  company: MyString
+  description: MyText
+  dates_locations: MyText
+  compensation: MyText
+
+two:
+  name: MyString
+  company: MyString
+  description: MyText
+  dates_locations: MyText
+  compensation: MyText

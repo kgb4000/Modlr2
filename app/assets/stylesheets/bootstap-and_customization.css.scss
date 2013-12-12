@@ -1,0 +1,179 @@
+@import 'bootstrap';
+
+body {
+	font-size: 1.8em;
+}
+
+.header-text {
+	max-width: 5em;
+}
+
+.section-text {
+	font-size: 3.4em;
+}
+
+.features p {
+	font-size: 1.2em;
+	font-weight: 200;
+}
+
+/* Navbar */
+
+.navbar-toggle {
+	border: none;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-default {
+	background-color: #fff;
+	border-color: #000;
+}
+
+ul.nav.navbar li {
+	color: #000;
+}
+
+.navbar-toggle,
+.icon-bar {
+	background-color: tansparent;
+}
+
+.icon-bar {
+	background-color: #000;
+}
+
+div.body-measurements {
+	margin-top: 1.6em;
+}
+
+div.body-measurements p {
+	font-size: .8em;
+}
+
+.center {
+	text-align: center;
+}
+
+.jumbotron {
+	margin-bottom: 0;
+	background-color: #fff;
+
+}
+
+.main-img {
+	height: 30em;
+	margin-top: 1.2em;
+}
+
+.message {
+	background-color: #222;
+	color: #fff;
+	padding: 1em 0;
+}
+
+.two {
+	padding: 2em 0;
+}
+
+.form-control {
+	border: 1px solid #222;
+}
+
+.btn-primary {
+	background-color: #222;
+	border-color: #000;
+}
+
+.feature-box-1 {
+	padding: 0 0.5em 0.5em;
+	border: 8px solid #222;
+	border-radius: .6em;
+	margin-top: 1.5em;
+
+}
+
+.feature-box-img {
+	height: 17.2em;
+	margin-top: .5em;
+}
+
+.section-header {
+	font-size: 3.5em;
+}
+
+.space {
+	margin: 1em 0;
+}
+
+.resource {
+	margin-top: 1.8em;
+	text-align: center;
+}
+
+.box-header {
+	color: #222;
+}
+
+hr {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+hr.heavy {
+	border: 2px solid #222;
+}
+
+hr.dash {
+	border-top: 2px dotted #000;
+}
+
+.well {
+	background-color: #fff;
+	border: 1px solid #000;
+}
+
+div.well a {
+	color: #000;
+}
+
+.form-control:focus {
+	border-color: #000;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary:hover {
+	background-color: #fff;
+	border-color: #000;
+	color: #000;
+}
+
+.round,
+.round-1,
+.round-2,
+.round-3,
+.round-4,
+.round-5,
+.round-6,
+.round-7 {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    margin: 1em auto;
+}
+
+.round {
+    background-color: #E74C3C;
+}
+
+.round-1 {
+    background-color: #b6cc3b; 
+}
+
+.round-2 {
+    background-color: #fdbe37;
+}
+

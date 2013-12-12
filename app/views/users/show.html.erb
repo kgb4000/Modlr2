@@ -1,0 +1,13 @@
+<div class="container">
+
+	<h1><%= @user.name %></h1>
+	<%=link_to "Add new pictures", new_pin_path, class: "btn btn-primary btn-lg" %></li>
+	<p>My pictures</p>
+
+	
+
+	<div id="pins">
+		<%= render @pins %>
+	</div>
+
+</div>

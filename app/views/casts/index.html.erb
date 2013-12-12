@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      
+    <h1>Post a modelling job</h1>
+
+      <%= link_to 'Create a new modelling job', new_cast_path, class: "space btn btn-primary btn-lg"  %>
+    
+      <% @casts.each do |cast| %>
+      <h2>'<%= cast.name %>'</h2>
+
+      <hr class="heavy">
+     
+      <h3>Company:</h3>
+      <%= cast.company %>
+   
+      <hr>
+
+      <h3>Description:</h3>
+      <%= cast.description %>
+  
+      <hr>
+
+      <h3>Dates and locations:</h3>
+      <%= cast.dates_locations %>
+
+      <hr>
+
+      <h3>Compensation:</h3>
+      <%= cast.compensation %>
+    
+      <hr>
+
+      <%= link_to 'Show', @cast %> 
+      <% if cast.user == current_user %>
+        | <%= link_to 'Edit', edit_cast_path(@cast) %> |
+        <%= link_to 'Destroy', cast, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    
+      <% end %>  
+          
+    </div>
+  </div>
+</div>

@@ -1,0 +1,161 @@
+<% if user_signed_in? %>
+<div class="container">
+  <div class="row">
+  <h2 class="col-md-3 center">Hire Urban Modls</h2>
+</div>
+  <div id="pins" class="transitions-enabled">
+    <%= render @pins %>
+  </div>
+</div>
+<% else %>
+  <div class="master-head">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="container">
+          <div class="col-md-6">
+            <h1>Get beautiful models and talent for your next big campaign</h1>  
+            <p>Accepting models interested in being in music videos, urban magazines, and photo shoots.</p>
+            <p>Free for a limited time</p>
+
+            <form class="form-inline" role="form">
+              <div class="form-group">
+                <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+                <%= devise_error_messages! %>
+
+                <div class="form-group">
+                  <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Enter email" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.submit "Join Video Modlr", class: "btn btn-primary" %>
+                </div>
+                <% end %>
+              </div>
+            </form> 
+          
+          </div>
+           <div class="col-md-4 center">   
+              <%= image_tag "Nicole-Mitchell.png", class: "main-img"%>
+            </div>
+            <div class="col-md-2">   
+              <div class="body-measurements">
+                <strong>Nicole Mitchell</strong>
+                <p>Height - 5' 11"</p>
+                <p>Weight - 140 lbs</p>
+                <p>Bust - 36</p>
+                <p>Hips - 44"</p>
+                <p>Ethnicity - Black</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div class="container">
+    <div class="message">
+      <div class="col-md-12">
+        <h3 class="center">Sign up to win a $2000 Power Shoot with the TSD Agency</h3> 
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row two">
+      <div class="col-md-4">
+            <!--<div class="round">-->
+        <div class="icon" data-icon="&#xe005;" aria-hidden="true"></div>
+            
+        <div class="feature-box-1">
+          <h2 class="box-header">Looking for modeling jobs?</h2>
+          <ul>
+            <li>Build your portfolio, find modeling jobs in your city and other cities</li>
+            <li>Jobs for video models and print models</li>
+            <li>Get email updates for model calls</li>
+            <li>Take your carrer to the next level</li>
+          </ul>
+          <%= link_to "Join Video Modlr", new_user_registration_path, class: "space btn btn-primary" %>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+            <!--<div class="round-1">-->
+        <div class="icon" data-icon="&#xe00b;" aria-hidden="true"></div>
+        <div class="feature-box-1">
+          <div class="row">
+            <div class="col-md-3 center"> 
+              <%= image_tag "Nicole-Mitchell.png", class: "feature-box-img"%>
+            </div>
+            <div class="col-md-8">
+              <h2 class="box-header">Casting for a music video, urban magazine, or photo shoot?</h2>
+              <ul>
+                <li>Find new models and talent in your city</li>
+                <li>Reach hundreds of models for music videos and urban magazine</li>
+                <li>Post model calls for parties, fashion shows, music videos, photo shoots, documentaries, acting, etc</li>
+              </ul>
+              <%= link_to "Post a modelling job", new_cast_path, class: "space btn btn-primary" %>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div class="container">
+    <div class="message">
+      <div class="col-md-12">
+        <h3 class="center">Get seen by more casting directors for music videos and photo shoots</h3> 
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row two">
+      <div class="col-md-8">
+        <h2 class="section-header">Modelling jobs</h2>
+        <% @casts.each do |cast| %>
+        <hr class="heavy">
+        <h2>'<%= cast.name %>'</h2>
+        <small>Posted on <%= cast.created_at.strftime("%A %b %Y") %></small>
+        <hr class="dash">
+        
+       
+        <h3>Company:</h3>
+        <%= cast.company %>
+     
+        <hr>
+        <h3>Description:</h3>
+        <%= cast.description %>
+    
+        <hr>
+        <h3>Dates and locations:</h3>
+        <%= cast.dates_locations %>
+
+        <hr>
+        <h3>Compensation:</h3>
+        <%= cast.compensation %>
+      
+        <hr>
+        <%= link_to 'Show', casts_path %> 
+          <% if @cast_user %>|
+            <%= link_to 'Edit', edit_cast_path(cast) %> |
+            <%= link_to 'Destroy', cast, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        <% end %>  
+        <hr class="heavy">
+      </div>
+      <div class="col-md-4">
+        <h2 class="resource">Model Resource</h2>
+
+      </div>
+    </div>
+  </div>
+<% end %>
+
+ 
+
+

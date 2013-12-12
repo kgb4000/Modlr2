@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>All models index</h1>
+  <% if user_signed_in? %>
+    <%= link_to 'Add a new photo', new_pin_path, class: "space btn btn-primary btn-lg" %>
+  <% end %>
+  <div id="pins" class="transitions-enabled">
+    <%= render @pins %>
+  </div>
+</div>
+
+
