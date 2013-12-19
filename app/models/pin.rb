@@ -8,14 +8,5 @@ class Pin < ActiveRecord::Base
 	validates :state, presence: true
 	validates :bio, presence: true
 
-	validate :validate_minimum_image_size
-
-	def validate_minimum_image_size
-	  image = MiniMagick::Image.open(picture.path)
-	  unless image[:width] > 400 && image[:height] > 400
-	    errors.add :image, "should be 400x400px minimum!" 
-	  end
-	end
-
-		mount_uploader :image, ImageUploader
-	end
+	mount_uploader :image, ImageUploader
+end

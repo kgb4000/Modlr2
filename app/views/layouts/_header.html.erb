@@ -17,7 +17,6 @@
 
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-      <li>Signed in as... <%= current_user.name %></li>
         <li><%= link_to "Profile", user_path(current_user) %></li>
         <li><%= link_to "Post job", new_cast_path %></li>
         <li><%= link_to "Account Settings", edit_user_registration_path %></li>

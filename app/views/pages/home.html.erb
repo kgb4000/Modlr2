@@ -1,20 +1,20 @@
 <% if user_signed_in? %>
-<div class="container">
-  <div class="row">
-  <h2 class="col-md-3 center">Hire Urban Modls</h2>
-</div>
+  <div class="container">
+    <div class="row">
+    <h2 class="col-md-3 center">Hire Urban Modls</h2>
+  </div>
   <div id="pins" class="transitions-enabled">
     <%= render @pins %>
   </div>
-</div>
+
 <% else %>
   <div class="master-head">
     <div class="jumbotron">
       <div class="row">
         <div class="container">
-          <div class="col-md-6">
-            <h1>Get beautiful models and talent for your next big campaign</h1>  
-            <p>Accepting models interested in being in music videos, urban magazines, and photo shoots.</p>
+          <div class="col-xs-12 col-md-6">
+            <h1>Get beautiful talent and models for your next big campaign</h1>  
+            <p>Accepting models interested in being in music videos, urban magazines, and for photo shoots.</p>
             <p>Free for a limited time</p>
 
             <form class="form-inline" role="form">
@@ -39,7 +39,7 @@
           
           </div>
            <div class="col-md-4 center">   
-              <%= image_tag "Nicole-Mitchell.png", class: "img-responsive"%>
+              <%= image_tag "Nicole-Mitchell.png"%>
             </div>
             <div class="col-md-2">   
               <div class="body-measurements">
@@ -58,9 +58,7 @@
 
   </div class="container">
     <div class="message">
-      <div class="col-md-12">
-        <h3 class="center">Sign up to win a $2000 Power Shoot with the TSD Agency</h3> 
-      </div>
+      <h3 class="center">Sign up to win a $2000 Power Shoot with the TSD Agency</h3> 
     </div>
   </div>
 
@@ -107,16 +105,14 @@
 
   </div class="container">
     <div class="message">
-      <div class="col-md-12">
-        <h3 class="center">Get seen by more casting directors for music videos and photo shoots</h3> 
-      </div>
+      <h3 class="center">Get seen by more casting directors for music videos and photographers</h3> 
     </div>
   </div>
 
   <div class="container">
     <div class="row two">
       <div class="col-md-8">
-        <h2 class="section-header">Modelling jobs</h2>
+        <h2 class="section-header">Modeling jobs</h2>
         <% @casts.each do |cast| %>
         <hr class="heavy">
         <h2>'<%= cast.name %>'</h2>
@@ -150,6 +146,21 @@
       </div>
       <div class="col-md-4">
         <h2 class="resource">Model Resource</h2>
+        <div>
+          <h3 class="model-resources">Video/Casting directors</h3>
+        </div>
+        <div>
+          <h3 class="model-resources">Photographers</h3>
+        </div>
+        <div>
+          <h3 class="model-resources">Urban magazines</h3>
+        </div>
+        <div>
+          <h3 class="model-resources">Modeling agencies</h3>
+        </div>
+        <div>
+          <h3 class="model-resources">Model managers</h3>
+        </div>
 
       </div>
     </div>

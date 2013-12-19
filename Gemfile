@@ -20,7 +20,6 @@ gem 'masonry-rails', '~> 0.2.0'
 
 gem 'jquery-turbolinks'
 
-
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem "rspec-rails", ">= 2.11.4", :group => [:development, :test]

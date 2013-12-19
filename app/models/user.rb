@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :roles
 
-  validates :name, presence: true
-  validates_uniqueness_of :name, :email, :case_sensitive => false
+  
+  validates_uniqueness_of :email, :case_sensitive => false
   
 end
